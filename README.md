@@ -2,7 +2,7 @@
 
 A simple book analyzer Python script. Exercise found [here](https://boot.dev/learn/build-local-dev-environment-python)
 
-Prints out the words and letters counts from books found in the books/ directory in a nice, small report. At the moment, only Frankenstein is present. 
+Prints out the words and letters counts from books found in the books/ directory in a nice, small report. At the moment, only Frankenstein and Alice in Wonderland are present. 
 
 ## How to run
 ```
