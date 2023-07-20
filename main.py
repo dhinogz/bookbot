@@ -3,16 +3,23 @@ Bookbot - A simple book analyzer program.
 Exercise found at: https://boot.dev/learn/build-local-dev-environment-python
 """
 
+import os
 import util
 
-FILE = "books/frankenstein.txt"
+DIR = "books/"
 
 
 def main():
-    with open(FILE) as f:
+    for file_name in os.listdir(DIR):
+        file = f"{DIR}{file_name}"
+        run_report(file)
+
+
+def run_report(file: str) -> None:
+    with open(file) as f:
         text = f.read()
 
-    print(f"--- Begin report of {FILE} ---")
+    print(f"\n--- Begin report of {file} ---\n")
 
     words = util.get_word_count(text)
     print(f"{words} words found in the document\n")
@@ -20,7 +27,7 @@ def main():
     char_count = util.get_letter_count(text)
     util.print_char_count(char_count)
 
-    print("--- End report --- ")
+    print("\n--- End report ---\n")
 
 
 if __name__ == "__main__":
